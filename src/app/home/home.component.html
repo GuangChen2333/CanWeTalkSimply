@@ -1,7 +1,15 @@
 <section class="home">
   <h2 class="title">Can We Talk Simply ?</h2>
   <p-inputGroup class="search-group">
-    <input pInputText type="text" class="search-input"/>
-    <button type="button" pButton icon="pi pi-search" label="搜索" iconPos="left"></button>
+    <input pInputText type="text" class="search-input" placeholder="调价" #word/>
+    <button
+      pButton
+      type="button"
+      icon="pi pi-search"
+      iconPos="left"
+      label="搜索"
+      [loading]="isLoading"
+      (click)="search(word.value ? word.value : word.placeholder)"
+    ></button>
   </p-inputGroup>
 </section>
