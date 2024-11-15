@@ -1,7 +1,7 @@
 <section class="home">
   <h2 class="title">Can We Talk Simply ?</h2>
   <p-inputGroup class="search-group">
-    <input pInputText type="text" class="search-input" placeholder="调价" #word/>
+    <input pInputText type="text" class="search-input" placeholder="调价" (keydown.enter)="onEnter()" #word/>
     <button
       pButton
       type="button"

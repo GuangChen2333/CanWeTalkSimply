@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {Button, ButtonDirective} from 'primeng/button';
 import {Ripple} from 'primeng/ripple';
 import {InputGroupModule} from 'primeng/inputgroup';
@@ -20,6 +20,7 @@ import {Router} from '@angular/router';
 })
 
 export class HomeComponent {
+  @ViewChild('word') word_input!: ElementRef;
 
   constructor(private router: Router) {
   }
@@ -29,5 +30,12 @@ export class HomeComponent {
   search(word: string) {
     this.isLoading = true;
     this.router.navigate([`/result`], {queryParams: {word: word}}).then(_ => this.isLoading = false);
+  }
+
+  onEnter() {
+    if (document.activeElement === this.word_input.nativeElement) {
+      const input = this.word_input.nativeElement as HTMLInputElement
+      this.search(input.value ? input.value : input.placeholder);
+    }
   }
 }

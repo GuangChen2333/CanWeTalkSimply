@@ -8,6 +8,7 @@ import {IWordDetail} from '../../interfaces/word-detail.interface';
 import {WordService} from '../../services/word.service';
 import {WordDetailComponent} from './components/word-detail/word-detail.component';
 import {NgForOf} from '@angular/common';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 
 @Component({
   selector: 'app-result',
@@ -28,19 +29,40 @@ export class ResultComponent implements AfterViewInit, OnInit {
   @Input({required: true}) word!: string;
   @ViewChild('word') word_input!: ElementRef;
 
-  word_detail: IWordDetail | undefined;
   results: IWordDetail[] | undefined;
+  isLoading: boolean = false;
 
   constructor(
-    private wordService: WordService
+    private wordService: WordService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) {
   }
 
   ngOnInit() {
-    this.results = this.wordService.filterByName(this.word)
+    this.activatedRoute.queryParams.subscribe((params: Params) => {
+      const word = params['word'];
+      console.info(`Word: ${word}`);
+      this.results = this.wordService.filterByName(word);
+      this.word = word;
+    });
   }
 
   ngAfterViewInit(): void {
     (this.word_input.nativeElement as HTMLInputElement).value = this.word
+  }
+
+  search(word: string) {
+    this.isLoading = true;
+    this.router.navigate(
+      [`/result`], {queryParams: {word: word}, onSameUrlNavigation: "reload"}
+    ).then(_ => this.isLoading = false);
+  }
+
+  onEnter() {
+    if (document.activeElement === this.word_input.nativeElement) {
+      const input = this.word_input.nativeElement as HTMLInputElement
+      this.search(input.value ? input.value : this.word);
+    }
   }
 }
