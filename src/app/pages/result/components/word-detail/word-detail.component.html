@@ -1,0 +1,16 @@
+<section class="details">
+  <section class="word-top">
+    <h4 class="word-title" [id]="word.name">{{ word.name }}</h4>
+    <p-tag class="word-pos" [value]="word.pos" [rounded]="true" severity="warning"></p-tag>
+  </section>
+
+  <section class="word-detail">
+    {{ word.description }}
+  </section>
+
+  <p-fieldset legend="例句" class="word-examples">
+    <p *ngFor="let example of word.examples">{{ example }}</p>
+  </p-fieldset>
+</section>
+
+<p-divider class="word-spacer"></p-divider>

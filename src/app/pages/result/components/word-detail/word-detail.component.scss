@@ -1,0 +1,50 @@
+:host {
+  display: flex;
+  width: 100%;
+  margin: 2rem 5rem 0;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h4.word-title {
+  font-size: 28px;
+  font-weight: 650;
+  color: #101214;
+  line-height: 42px;
+}
+
+section.details {
+  display: block;
+  width: 60vw;
+  max-width: 60vw;
+}
+
+.word-spacer {
+  margin-top: 5vh;
+  width: 60vw;
+  max-width: 60vw;
+}
+
+section.word-top {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.word-pos {
+  margin-left: 0.6vw;
+  margin-bottom: 5px;
+}
+
+section.word-detail {
+  display: block;
+  margin: 0.5rem 3px;
+  font-weight: 400;
+}
+
+.word-examples {
+  display: block;
+  margin-top: 3px;
+}

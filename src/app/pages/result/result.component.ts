@@ -38,7 +38,6 @@ export class ResultComponent implements AfterViewInit, OnInit {
 
   ngOnInit() {
     this.results = this.wordService.filterByName(this.word)
-    console.log(this.results)
   }
 
   ngAfterViewInit(): void {
