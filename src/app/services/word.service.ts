@@ -7,7 +7,6 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class WordService {
-  //TODO: must replace this url before release
   url = 'https://raw.githubusercontent.com/GuangChen2333/CanWeTalkSimplyData/refs/heads/master/db.json';
   words: IWordDetail[] = []
 
