@@ -1,27 +1,22 @@
-# CanWeTalkSimply
+# CanWeTalkSimply 咪，说话简单点？
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+![Deploy To Pages](https://github.com/GuangChen2333/CanWeTalkSimply/actions/workflows/deploy.yaml/badge.svg)
 
-## Development server
+最近沉迷于买谷, 发现谷圈越来越多的专有名词实在无从下手。为了方便自己和他人，以及最近恰好正在学习 Angular, 于是做了这个小工具。
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 使用网址
 
-## Code scaffolding
+[cwts.mooneze.org](https://cwts.mooneze.org/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 如何提交新词
 
-## Build
+使用 [本模板](https://github.com/GuangChen2333/CanWeTalkSimplyData/issues/new?assignees=GuangChen2333&labels=new-word&projects=&template=%E6%96%B0%E8%AF%8D%E6%8F%90%E4%BA%A4.md&title=New+Word%3A+)
+可向 [GuangChen2333/CanWeTalkSimplyData](https://github.com/GuangChen2333/CanWeTalkSimplyData) 提交新词。
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 词义指正与增加例句
 
-## Running unit tests
+使用这些 [Github Issue 模板](https://github.com/GuangChen2333/CanWeTalkSimplyData/issues/new/choose)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 如何协助词典开发
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+欢迎在本仓库提出 Issue 与 Pull requests
