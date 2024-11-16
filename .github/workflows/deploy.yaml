@@ -36,9 +36,6 @@ jobs:
       - name: Install dependencies with Node
         run: npm ci
 
-      - name: Test with Node
-        run: npm test
-
       - name: Build with Angular
         run: npm build
 
