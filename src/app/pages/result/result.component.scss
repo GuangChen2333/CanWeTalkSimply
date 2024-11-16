@@ -19,6 +19,7 @@
 h5.subtitle {
   font-weight: 500;
   margin-right: 3vw;
+  font-size: min(24px, 6vw);
 }
 
 p-inputGroup.search-group-result {
@@ -30,10 +31,17 @@ section.content-result {
   margin-top: 92px;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center
 }
 
 .spacer {
   position: fixed;
   top: 92px;
   width: 100%;
+}
+
+p.not-found {
+  &.none {
+    display: none;
+  }
 }

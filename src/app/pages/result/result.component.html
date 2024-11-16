@@ -17,5 +17,8 @@
     *ngFor="let word of results"
     [word]="word"
   ></app-word-detail>
+  <p
+    [className]="results?.length === 0 ? 'not-found' : 'not-found none'"
+  >如果你看到这个就代表搜索没有结果或者网络不佳 !</p>
 </section>
 
