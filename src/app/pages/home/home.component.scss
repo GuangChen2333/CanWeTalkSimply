@@ -16,7 +16,7 @@ section.home {
 
 h2.title {
   margin-bottom: 20px;
-  font-size: min(60px, 6vw);
+  font-size: min(60px, max(6vw, 25px));;
 }
 
 input.search-input {
@@ -27,4 +27,5 @@ p-inputGroup.search-group {
   display: flex;
   justify-content: center;
   width: auto;
+  height: 6vh;
 }
