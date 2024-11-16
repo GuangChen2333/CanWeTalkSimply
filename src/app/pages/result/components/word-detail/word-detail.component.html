@@ -8,7 +8,9 @@
     {{ word.description }}
   </section>
 
-  <p-fieldset legend="例句" class="word-examples">
+  <p-fieldset
+    legend="例句"
+    [className]="word.examples.length === 0 ? 'word-examples none' : 'word-examples'">
     <p *ngFor="let example of word.examples">{{ example }}</p>
   </p-fieldset>
 </section>

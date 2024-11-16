@@ -7,17 +7,11 @@
   flex-wrap: wrap;
 }
 
-h4.word-title {
+.word-title {
   font-size: 28px;
   font-weight: 650;
   color: #101214;
   line-height: 42px;
-}
-
-section.details {
-  display: block;
-  width: 60vw;
-  max-width: 60vw;
 }
 
 .word-spacer {
@@ -26,25 +20,36 @@ section.details {
   max-width: 60vw;
 }
 
-section.word-top {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  flex-wrap: wrap;
-}
-
 .word-pos {
   margin-left: 0.6vw;
   margin-bottom: 5px;
 }
 
-section.word-detail {
-  display: block;
-  margin: 0.5rem 3px;
-  font-weight: 400;
-}
-
 .word-examples {
+  &.none {
+    display: none;
+  }
   display: block;
   margin-top: 3px;
+}
+
+section {
+  &.details {
+    display: block;
+    width: 60vw;
+    max-width: 60vw;
+  }
+
+  &.word-top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  &.word-detail {
+    display: block;
+    margin: 0.5rem 3px;
+    font-weight: 400;
+  }
 }

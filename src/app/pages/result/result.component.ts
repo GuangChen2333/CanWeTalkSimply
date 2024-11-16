@@ -65,4 +65,10 @@ export class ResultComponent implements AfterViewInit, OnInit {
       this.search(input.value ? input.value : this.word);
     }
   }
+
+  backToHome() {
+    this.router.navigate(
+      ['']
+    ).then(r => console.info(`Back to home: ${r}`))
+  }
 }
