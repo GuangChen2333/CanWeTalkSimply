@@ -29,6 +29,10 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "data"
               }
             ],
             "styles": [
@@ -90,6 +94,10 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "data"
               }
             ],
             "styles": [

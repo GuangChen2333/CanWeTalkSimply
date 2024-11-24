@@ -1,0 +1,4 @@
+[submodule "data"]
+	path = data
+	url = https://github.com/GuangChen2333/CanWeTalkSimplyData.git
+  branch = sitemap
