@@ -43,7 +43,9 @@ export class ResultComponent implements AfterViewInit, OnInit {
     this.activatedRoute.queryParams.subscribe((params: Params) => {
       const word = params['word'];
       console.info(`Word: ${word}`);
-      this.results = this.wordService.filterByName(word);
+      this.wordService.filterByName(word).subscribe(
+        words => this.results = words
+      );
       this.word = word;
     });
   }

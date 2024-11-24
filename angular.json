@@ -34,7 +34,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "prerender": false,
+            "ssr": false
           },
           "configurations": {
             "production": {
