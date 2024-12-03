@@ -5,6 +5,10 @@ on:
     branches:
       - master
 
+  repository_dispatch:
+    types:
+      - data-update
+
   workflow_dispatch:
 
 permissions:
@@ -32,6 +36,15 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
+      - name: Get sitemap
+        run: |
+          git clone https://github.com/GuangChen2333/CanWeTalkSimplyData.git sitemap
+          cd sitemap
+          git checkout sitemap
+          cat sitemap.xml
+          cd ..
+          cp sitemap/sitemap.xml public
 
       - name: Install dependencies with Node
         run: npm ci

@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "git submodule update --init --recursive && ng build",
-    "build:prod": "git submodule update --init --recursive && ng build -c production",
+    "build": "ng build",
+    "build:prod": "ng build -c production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
